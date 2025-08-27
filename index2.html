@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+           
+        }
+        nav{
+            width: 20%;
+            border-right: 2px solid grey;
+            height: 100vh;
+           
+        }
+        
+       
+        .img-sonko{
+            width: 80px;
+            border-radius: 50%;
+            position: relative;
+            left: 90px;
+            bottom: 20px;
+        }
+        header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            box-shadow: 0px 5px 5px grey ;
+           width: 100%;
+           height: 99px;
+            
+
+        }
+        strong{
+            position: relative;
+            bottom: 40px;
+            left: 20px;
+            font-size: 10px;
+        }
+        .search{
+            position: relative;
+
+        }
+        #recherche{
+             position: absolute;
+             left: 2px;
+             top: 6px;
+             font-size: 12px;
+             margin-left: 5px;
+             color: grey;
+              margin-top: 40px;
+
+             
+        }
+        input{
+            border-radius: 10px;
+            width: 250px;
+            padding: 5px;
+            background-color: lightgray;
+            border: none;
+             margin-top: 40px;
+        }
+        .fa-bell{
+          position: relative;
+          right: 20px;
+        }
+        .entete{
+            margin-top: 40px;
+        }
+        
+        .img-orange{
+            width: 50%;
+            margin-left: 30px;
+        }
+        .box{
+            display: flex;
+            flex-direction: column; 
+            margin-top: 50px;
+           
+        }  
+        .box button{
+            width: 85px;
+            color: orange;
+            background-color: rgba(255, 166, 0, 0.247);
+            border-radius: 15px;
+            border: none;
+            font-size: 10px;
+            padding: 5px;
+             margin: auto;
+            
+        } 
+        ul{
+           list-style: none;
+           
+        }
+    
+        a{
+            text-decoration: none;
+            color: black;
+            font-weight: 600; 
+              font-size: 12px;
+        } 
+        ul, li, a{
+             margin: 10px; 
+            
+         }
+        
+       
+         li:hover{
+           background-color:  rgba(255, 166, 0, 0.247);
+            border-radius: 10px; 
+            padding: 10px ; 
+            width: 100%;
+        }
+        .list{
+            margin-top: 70px;   
+        }
+        .icon-orange{
+            color: orange;
+           padding-right: 10px;
+        }
+        main{
+            width: 80%;
+            height: 100%;
+            display: block;
+        }
+
+        .mdp{
+            
+            background-color: orange;
+            padding: 10px 100px 20px 10px;
+            margin: 15px;
+            color: white;
+            font-size: 10px;
+
+        }
+        .num{
+            font-weight: bold;
+            font-size: 20px;
+           
+
+        }
+        .fa-xl{
+            background-color: white;
+            padding: 10px;
+            border-radius: 50%;
+            position: relative;
+            left: 90px;
+
+        }
+        
+        .container{
+            height: 100%;
+           margin-top: 10px;
+           margin-left: 15px;
+           margin-right: 15px;
+           background-color: lightgrey;
+        }
+        .B{
+            display: flex;
+            justify-content: space-between;
+            margin: 15px;
+        }
+        .btn{
+            background-color: rgba(0, 128, 0, 0.89);
+            border: none;
+        padding: 7px;
+        border-radius: 5px;
+        color: white;
+        margin-top: 15px;
+        }
+        .b1{
+            margin-top: 15px;
+        }
+        .C{
+            display: flex;
+            justify-content: space-between;
+        }
+        .recherche{
+            background-color: white;
+         padding: 5px 650px 5px 5px;
+         border-radius: 5px ;
+         color: lightgrey;
+        }
+        .tous{
+            border: 1px solid lightgrey;
+          background-color: white;
+          padding-left: 5px;
+          padding-right: 80px;
+          padding-top: 2px;
+          padding-bottom: 2px;
+          border-radius: 5px;
+        }
+        .grille{
+            background-color: orange;
+            padding: 10px;
+            border-radius: 5px 0px 0px 5px;
+        }
+        .liste{
+            border: 1px solid lightgrey;
+            padding: 10px ;
+            border-radius: 0px 5px 5px 0px;
+            background-color: white;
+        }
+        .D{
+              display: flex; 
+             justify-content: space-around;
+             margin-top: 20px;
+             
+        }
+        .images{
+            width: 10%;
+            border-radius: 50%;
+            margin-right: 15px;
+            margin-left: 10px;
+            
+        }
+        .E{
+           
+            width: 30%;
+            height: 35vh;
+            background-color: white;
+            border-radius: 5px;
+            margin-top: 30px;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        
+        .e1{
+           border: 1px solid white;
+           box-shadow: 2px 2px 2px grey ;
+          width: 100px;
+          border-radius: 30px;
+          position: relative;
+          left: 200px;
+          padding: 5px;
+         
+        }
+        .active{
+           color: red;
+           background-color: pink;
+           padding: 2px;
+           border-radius: 20px;
+           cursor: pointer;
+        }
+        .fa-power-off{
+            color: green;
+            background-color: aquamarine;
+            padding: 2px;
+            border-radius: 10px;
+            position: relative;
+            left: 10px;
+            cursor: pointer;
+        }
+        .e2{
+            display: flex;
+
+        }
+        .e3{
+            background-color: lightgray;
+            margin-top: 20px;
+            width: 250px;
+            padding: 9px;
+            border-radius: 10px;
+            margin-left: 25px;
+        }
+        hr{
+            margin-top: 25px;
+        }
+        .details{
+            color: red;
+            position: relative;
+            left: 210px;
+            top: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .fa-calendar-days{
+            color: grey;
+            margin-right: 5px;
+        }
+        .dates{
+            color: gray;
+        }
+        .fa-users{
+            margin: 5px;
+        }
+        .promotions{
+           display: flex;
+           flex-wrap: wrap;
+           gap: 20px;
+        }
+        .decon{
+           background-color:  rgba(255, 166, 0, 0.247);
+           padding: 5px 30px;
+           color: brown;
+           border: none;
+           border-radius: 5px;
+           position: relative;
+           top: 220px;
+           left: 120px;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        
+        <div class="box">
+         <img src="orange.jpg" alt="orange" class="img-orange">
+         <button>Promotion-2025</button>
+         </div>
+         <div class="list">
+         <ul>
+            <li><a href=""><i class="fa-solid icon-orange fa-table"></i>Tableau de bord</a></li>
+            <li><a href=""><i class="fa-solid  icon-orange fa-folder-open"></i>Promotion</a></li>
+            <li><a href=""><i class="fa-solid  icon-orange fa-folder-closed"></i>Réferentiels</a></li>
+            <li><a href=""><i class="fa-solid  icon-orange fa-users"></i>Apprenants</a></li>
+            <li><a href=""><i class="fa-solid  icon-orange fa-folder-minus"></i>Gestions des présences</a></li>
+            <li><a href=""><i class="fa-solid  icon-orange fa-folder-minus"></i>Kits & laptops</a></li>
+            <li><a href=""><i class="fa-solid  icon-orange fa-list"></i>Rapports & Stats</a></li>
+         </ul>
+         <button class="decon">Déconnexion</button>
+         </div>
+         
+    </nav>
+    <main>
+    <header>
+     <div class="search"><i class="fa-solid fa-magnifying-glass" id="recherche"></i><input type="search" placeholder="      search"> </div>
+     <div class="entete">
+     <i class="fa-solid fa-bell"></i>
+     <span>Ousmane Sonko <br><strong>Admin</strong></span>
+     <img src="sonko.jpg" alt="" class="img-sonko">
+     </div>
+    </header>
+    </div>
+     <section class="container">
+        <div class="B">
+            <div class="b1">
+         <h1 style="color: green;">Promotion</h1> 
+         <span>Gérer les promotions de l'école</span>
+         </div>
+         <div class="b2">
+          <button class="btn">+ Ajouter une promotion</button>
+         </div>
+        </div>
+        <div class="C">
+           <div class="mdp"><span class="num">0 </span><br>Apprenant<i class="fa-solid fa-xl icon-orange fa-users"></i></div>
+           <div class="mdp" ><span class="num">5 </span><br> Réferentiels<i class="fa-solid fa-xl icon-orange fa-folder-closed"></i></div>
+           <div class="mdp"><span class="num">1 </span> <br>Promotions actives<i class="fa-solid fa-xl icon-orange fa-folder-closed"></i></div>
+           <div class="mdp"><span class="num">5</span><br> Total promotion<i class="fa-solid fa-xl icon-orange fa-folder-closed"></i></div>
+        </div>
+        <div class="D">
+            <div class="d1">
+              <span class="recherche">Recherche...</span>
+            </div>
+            <div class="d2">
+              <span class="tous">Tous </span>
+            </div>
+            <div class="d3">
+               <span class="grille">Grille</span>
+            </div>
+            <div class="d4">
+               <span class="liste">Liste</span>
+            </div>
+        </div>
+         <div class="promotions">
+        <div class="E">
+            <div class="e1"><span class="active">inactive</span> <i class="fa-solid fa-power-off"></i></div>
+            <div class="e2">
+                <img src="images.jpg" alt="images" class="images">
+                <div>
+                <h2>Promotion 2025</h2>
+                <span class="dates"><i class="fa-solid fa-calendar-days"></i>04/02/2025 - 04/12/2025</span>
+                </div>
+            </div>
+            <div class="e3">
+               <span><i class="fa-solid fa-users"></i>2 Apprenants</span> 
+            </div>
+            <hr>
+           <span class="details">Voir details <i class="fa-solid fa-angle-right"></i></span>
+        </div>
+        <div class="E">
+            <div class="e1"><span class="active">inactive</span> <i class="fa-solid  fa-power-off"></i></div>
+            <div class="e2">
+                <img src="images.jpg" alt="images" class="images">
+                <div>
+                <h2>Promotion 2025</h2>
+                <span class="dates"><i class="fa-solid fa-calendar-days"></i>04/02/2025 - 04/12/2025</span>
+                </div>
+            </div>
+            <div class="e3">
+               <span><i class="fa-solid fa-users"></i>2 Apprenants</span> 
+            </div>
+            <hr>
+            <span class="details">Voir details <i class="fa-solid fa-angle-right"></i></span>
+        </div>
+        <div class="E">
+            <div class="e1"><span class="active">inactive</span> <i class="fa-solid fa-power-off"></i></div>
+            <div class="e2">
+                <img src="images.jpg" alt="images" class="images">
+                <div>
+                <h2>Promotion 2025</h2>
+                <span class="dates"><i class="fa-solid fa-calendar-days"></i>04/02/2025 - 04/12/2025</span>
+                </div>
+            </div>
+            <div class="e3">
+               <span><i class="fa-solid fa-users"></i>2 Apprenants</span> 
+            </div>
+            <hr>
+            <span class="details">Voir details <i class="fa-solid fa-angle-right"></i></span>
+        </div> 
+        <div class="E">
+            <div class="e1"><span class="active">inactive</span> <i class="fa-solid fa-power-off"></i></div>
+            <div class="e2">
+                <img src="images.jpg" alt="images" class="images">
+                <div>
+                <h2>Promotion 2025</h2>
+                <span class="dates"><i class="fa-solid fa-calendar-days"></i>04/02/2025 - 04/12/2025</span>
+                </div>
+            </div>
+            <div class="e3">
+               <span><i class="fa-solid fa-users"></i>2 Apprenants</span> 
+            </div>
+            <hr>
+            <span class="details">Voir details <i class="fa-solid fa-angle-right"></i></span>
+        </div>
+        <div class="E">
+            <div class="e1"><span class="active">inactive</span> <i class="fa-solid fa-power-off"></i></div>
+            <div class="e2">
+                <img src="images.jpg" alt="images" class="images">
+                <div>
+                <h2>Promotion 2025</h2>
+                <span class="dates"><i class="fa-solid fa-calendar-days"></i>04/02/2025 - 04/12/2025</span>
+                </div>
+            </div>
+            <div class="e3">
+               <span><i class="fa-solid fa-users"></i>2 Apprenants</span> 
+            </div>
+            <hr>
+            <span class="details">Voir details <i class="fa-solid fa-angle-right"></i></span>
+        </div>
+
+        </div>
+
+     </section>
+        
+         
+        </main>
+    
+    
+</body>
+</html>
